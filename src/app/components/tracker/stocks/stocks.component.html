@@ -1,0 +1,11 @@
+<div class="stocks">
+  <stt-stock
+    #stock
+    *ngFor="let item of data"
+    [data]="item"
+    (clickDeleteCard)="onClickDeleteCard($event)"
+  ></stt-stock>
+</div>
+<div class="loading" *ngIf="loading">
+  Updating data... Please wait a short moment.
+</div>

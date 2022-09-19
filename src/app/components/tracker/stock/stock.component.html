@@ -1,0 +1,42 @@
+<mat-card>
+  <mat-card-content>
+    <div class="header">
+      <div class="symbol">{{ data?.symbol }}</div>
+      <div class="name">{{ data?.name }}</div>
+      <button mat-mini-fab id="remove{{ data?.symbol }}" (click)="close()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <div class="info">
+      <div>
+        <div class="title">Change today :</div>
+        <div>{{ data?.change | percent | positive }}</div>
+      </div>
+      <div>
+        <div class="title">Opening price :</div>
+        <div>{{ data?.openPrice | currency: 'USD' }}</div>
+      </div>
+      <div class="dibujo">
+        <stt-arrow [up]="sube"></stt-arrow>
+      </div>
+      <div>
+        <div class="title">Current price :</div>
+        <div>{{ data?.currentPrice | currency: 'USD' }}</div>
+      </div>
+      <div>
+        <div class="title">High price :</div>
+        <div>{{ data?.highPrice | currency: 'USD' }}</div>
+      </div>
+      <div></div>
+    </div>
+    <div class="acciones">
+      <a
+        mat-button
+        color="primary"
+        id="sentiment{{ data?.symbol }}"
+        routerLink="/sentiment/{{ data?.symbol }}"
+        >See sentiment details</a
+      >
+    </div>
+  </mat-card-content>
+</mat-card>

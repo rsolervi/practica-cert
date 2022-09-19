@@ -1,0 +1,54 @@
+:host {
+  margin: 10px;
+  width: 300px;
+  text-align: left;
+  mat-card {
+    border-radius: 15px;
+  }
+  .header {
+    display: inline-flex;
+    justify-content: stretch;
+    width: 100%;
+    .symbol {
+      background-color: #7672e7;
+      border-radius: 8px;
+      height: 20px;
+      padding: 5px 8px 5px 8px;
+      color: white;
+      font-size: 10px;
+      font-weight: bold;
+    }
+    .name {
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+  .info {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    font-size: 11px;
+    .title {
+      font-weight: bold;
+    }
+    .dibujo {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 3;
+      grid-column-end: 3;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 45px;
+    }
+  }
+  .acciones {
+    width: 100%;
+    text-align: right;
+  }
+}

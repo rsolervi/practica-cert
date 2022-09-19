@@ -1,0 +1,50 @@
+<div>
+  <h1>STOCK TRACKER</h1>
+  <p>
+    Enter the symbol of a stock to track. <span>(i.e. AAPL, TSLA, GOOGL)</span>
+  </p>
+  <form #myForm="ngForm">
+    <div class="buscador">
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          name="stockInput"
+          id="stockInput"
+          [(ngModel)]="searchText"
+          #text="ngModel"
+          minlength="1"
+          maxlength="5"
+          required
+          pattern="^[a-zA-Z]+$"
+        />
+        <mat-hint
+          class="error"
+          *ngIf="validar(text) && text.errors?.['pattern']"
+          >Type only letters.</mat-hint
+        >
+        <mat-hint
+          class="error"
+          *ngIf="validar(text) && text.errors?.['minlength']"
+        >
+          Symbol must be at least 1 characters long.
+        </mat-hint>
+        <mat-hint
+          class="error"
+          *ngIf="validar(text) && text.errors?.['maxlength']"
+        >
+          Symbol must be 5 characters max.
+        </mat-hint>
+      </mat-form-field>
+    </div>
+    <button
+      mat-raised-button
+      color="primary"
+      id="trackBtn"
+      [disabled]="!myForm.valid"
+      (click)="buscar()"
+    >
+      Track it!
+    </button>
+  </form>
+</div>
