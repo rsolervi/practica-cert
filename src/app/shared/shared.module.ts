@@ -11,7 +11,6 @@ import { MatInputModule } from '@angular/material/input';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { AppRoutingModule } from 'src/app/app-routing.module';
 import { ArrowComponent } from '../components/shared/arrow/arrow.component';
 import { MonthPipe } from '../components/shared/month.pipe';
 import { PositivePipe } from '../components/shared/positive.pipe';
@@ -24,11 +23,9 @@ import { PositivePipe } from '../components/shared/positive.pipe';
     MatInputModule,
     MatCardModule,
     RouterModule,
-    AppRoutingModule,
     MatButtonModule,
     MatIconModule,
     BrowserModule,
-    AppRoutingModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
     HttpClientModule,
@@ -40,11 +37,9 @@ import { PositivePipe } from '../components/shared/positive.pipe';
     MatInputModule,
     MatCardModule,
     RouterModule,
-    AppRoutingModule,
     MatButtonModule,
     MatIconModule,
     BrowserModule,
-    AppRoutingModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
     HttpClientModule,

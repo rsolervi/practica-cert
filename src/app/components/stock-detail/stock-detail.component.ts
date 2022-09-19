@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { StockApiService } from 'src/app/services/stock-api.service';
 import { Sentiment } from '../../models/sentiment';
+import { StockApiService } from '../../services/stock-api.service';
 
 @Component({
   selector: 'stt-stock-detail',

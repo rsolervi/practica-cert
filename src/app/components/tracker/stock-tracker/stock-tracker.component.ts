@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { LocalStorageService } from '../../../services/local-storage.service';
 
 @Component({
   selector: 'app-stock-tracker',

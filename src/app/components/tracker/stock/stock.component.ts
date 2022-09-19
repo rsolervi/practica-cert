@@ -8,8 +8,9 @@ import {
   Output,
   SimpleChanges,
 } from '@angular/core';
-import { LocalStorageService } from 'src/app/services/local-storage.service';
+
 import { Stock } from '../../../models/stock';
+import { LocalStorageService } from '../../../services/local-storage.service';
 
 @Component({
   selector: 'stt-stock',

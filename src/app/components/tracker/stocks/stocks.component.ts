@@ -9,9 +9,10 @@ import {
 } from '@angular/core';
 import { forkJoin, of } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
-import { LocalStorageService } from 'src/app/services/local-storage.service';
-import { StockApiService } from 'src/app/services/stock-api.service';
+
 import { Stock } from '../../../models/stock';
+import { LocalStorageService } from '../../../services/local-storage.service';
+import { StockApiService } from '../../../services/stock-api.service';
 
 @Component({
   selector: 'stt-stocks',
