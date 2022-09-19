@@ -1,0 +1,40 @@
+<mat-card>
+  <mat-card-content>
+    <div class="header">
+      <div class="symbol">{{ symbol }}</div>
+      <div class="name">{{ empresa }}</div>
+    </div>
+    <div class="loading" *ngIf="loading">
+      Collecting data... Please wait a short moment.
+    </div>
+    <div *ngIf="!loading">
+      <div class="info">
+        <div
+          class="info-mes"
+          *ngFor="let s of data; let i = index"
+          [ngStyle]="{
+            'border-right':
+              i < 2 && i + 1 !== data?.length ? '1px solid gray' : '0'
+          }"
+        >
+          <div class="mes">{{ s.month | month }} {{ s.year }}</div>
+          <div class="datos">
+            <div>Change :</div>
+            <div>MSPR :</div>
+            <div>{{ s.change | positive }}</div>
+            <div>{{ s.mspr }}</div>
+          </div>
+          <div class="dibujo">
+            <stt-arrow
+              [up]="s.change === null ? null : s.change > 0"
+            ></stt-arrow>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+<a mat-button id="backBtn" name="backBtn" (click)="back()">
+  <mat-icon>arrow_back</mat-icon>
+  Back to list of stocks
+</a>

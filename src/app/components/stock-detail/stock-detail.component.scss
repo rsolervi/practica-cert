@@ -1,0 +1,91 @@
+:host {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #cdd5e9;
+  text-align: left;
+  mat-card {
+    width: 70%;
+    height: 150px;
+    max-width: 800px;
+    border-radius: 15px;
+    mat-card-content {
+      height: 100%;
+    }
+    .loading {
+      height: 100%;
+      width: 100%;
+      display: inline-flex;
+      padding: 30px;
+      justify-content: center;
+    }
+    .header {
+      display: inline-flex;
+      justify-content: stretch;
+      width: 100%;
+      .symbol {
+        background-color: #7672e7;
+        border-radius: 8px;
+        height: 20px;
+        padding: 5px 8px 5px 8px;
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+      }
+      .name {
+        width: 100%;
+        text-align: left;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 5px 5px 0 25px;
+      }
+    }
+    .info {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 10px;
+      font-size: 11px;
+      .info-mes {
+        width: 30%;
+        padding: 10px;
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        .mes {
+          font-weight: bold;
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
+        .datos {
+          grid-row-start: 2;
+          grid-row-end: 3;
+          grid-column-start: 1;
+          grid-column-end: 3;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto auto;
+          font-size: 12px;
+          margin-top: 5px;
+        }
+        .dibujo {
+          grid-row-start: 1;
+          grid-row-end: 3;
+          grid-column-start: 3;
+          grid-column-end: 3;
+          display: inline-flex;
+          align-self: center;
+        }
+      }
+    }
+  }
+  a {
+    margin-top: 30px;
+    color: #524daf;
+  }
+}
